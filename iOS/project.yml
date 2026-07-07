@@ -1,0 +1,70 @@
+name: Radio Dial
+options:
+  bundleIdPrefix: com.shimondeitel
+  deploymentTarget:
+    iOS: "17.0"
+settings:
+  base:
+    DEVELOPMENT_TEAM: W7Q885Q59C
+    MARKETING_VERSION: "1.0"
+    CURRENT_PROJECT_VERSION: "1"
+    SWIFT_VERSION: "5.0"
+    IPHONEOS_DEPLOYMENT_TARGET: "17.0"
+targets:
+  Radio Dial:
+    type: application
+    platform: iOS
+    deploymentTarget: "17.0"
+    sources:
+      - path: Radio Dial
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.shimondeitel.radiodial
+        INFOPLIST_FILE: Radio Dial/Info.plist
+        TARGETED_DEVICE_FAMILY: "1,2"
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+        GENERATE_INFOPLIST_FILE: YES
+        SUPPORTS_MACCATALYST: NO
+    info:
+      path: Radio Dial/Info.plist
+      properties:
+        CFBundleDisplayName: Radio Dial
+        UILaunchScreen: {}
+        UISupportedInterfaceOrientations:
+          - UIInterfaceOrientationPortrait
+        ITSAppUsesNonExemptEncryption: false
+  Radio DialTests:
+    type: bundle.unit-test
+    platform: iOS
+    deploymentTarget: "17.0"
+    sources:
+      - path: Radio DialTests
+    dependencies:
+      - target: Radio Dial
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.shimondeitel.radiodial.tests
+  Radio DialUITests:
+    type: bundle.ui-testing
+    platform: iOS
+    deploymentTarget: "17.0"
+    sources:
+      - path: Radio DialUITests
+    dependencies:
+      - target: Radio Dial
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.shimondeitel.radiodial.uitests
+schemes:
+  Radio Dial:
+    build:
+      targets:
+        Radio Dial: all
+    test:
+      targets:
+        - Radio DialTests
+        - Radio DialUITests
+    run:
+      config: Debug
+    archive:
+      config: Release

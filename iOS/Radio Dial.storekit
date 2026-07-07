@@ -1,0 +1,27 @@
+{
+  "identifier": "Configuration",
+  "nonRenewingSubscriptions": [],
+  "products": [
+    {
+      "displayPrice": "3.99",
+      "familyShareable": false,
+      "internalID": "1000001",
+      "localizations": [
+        {
+          "description": "Unlimited radios and part-sourcing notes",
+          "displayName": "Radio Dial Pro",
+          "locale": "en_US"
+        }
+      ],
+      "productID": "com.shimondeitel.radiodial.pro",
+      "referenceName": "Radio Dial Pro",
+      "type": "NonConsumable"
+    }
+  ],
+  "settings": {},
+  "subscriptionGroups": [],
+  "version": {
+    "major": 3,
+    "minor": 0
+  }
+}
